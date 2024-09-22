@@ -1,3 +1,167 @@
 .hidden {
     display: none;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.9); /* 포커스 시 테두리 강화 */
+    background-color: rgba(255, 255, 255, 0.8); /* 배경색 조금 더 밝게 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 포커스 시 그림자 더 강하게 */
+}
+
+#clock {
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.login-form {
+    margin-bottom: 50px;
+}
+
+.login-form input[type = "text"] {
+    height: 20px;
+}
+
+.login-form input[type = "submit"] {
+    margin-left: 20px;
+}
+
+.login-form input {
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.8); /* 반투명한 흰색 테두리 */
+    border-radius: 10px; /* 부드러운 둥근 모서리 */
+    background-color: rgba(255, 255, 255, 0.5); /* 반투명한 흰색 배경 */
+    color: #333; /* 다크 그레이 텍스트 */
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 */
+    transition: all 0.3s ease; /* 포커스 전환 시 부드러운 변화 */
+}
+
+.greeting {
+    font-size: 50px;
+}
+
+#todo-div {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 250px;
+    right: 300px;
+    width: 300px;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.7); /* 반투명한 흰색 배경 */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* 테두리와 배경 색 통일 */
+    border-radius: 10px; /* 부드러운 둥근 모서리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 부드러운 그림자 */
+    padding: 15px;
+    color: #333; /* 텍스트 색상: 다크 그레이 */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#todo-div:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 마우스를 올렸을 때 더 강한 그림자 */
+}
+
+#todo-form {
+    margin: 10px 65px;
+}
+
+#todo-form input[type = "text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#todo-list {
+    overflow-y: auto;
+    list-style: none; /* 기본 불릿 제거 */
+    padding: 0px;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* 각 항목의 배경색 */
+    border-radius: 5px; /* 항목의 둥근 모서리 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 항목에 약간의 그림자 */
+    transition: background-color 0.3s ease;
+}
+
+#todo-list li:hover {
+    background-color: rgba(255, 255, 255, 1); /* 항목에 마우스 올릴 때 배경 조금 더 밝게 */
+}
+
+button {
+    background-color: #290808; /* 삭제 버튼: 눈에 띄는 빨간색 */
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #700808; /* 버튼 호버 시 더 진한 빨간색 */
+}
+
+#quote {
+    position: fixed;
+    bottom: 10px;
+    font-family: 'Georgia', serif; /* 클래식한 느낌의 서체 */
+    font-size: 18px; /* 명언에 맞는 적당한 크기 */
+    color: rgba(255, 255, 255, 0.9); /* 거의 흰색의 반투명 텍스트 */
+    text-align: center; /* 중앙 정렬 */
+    background-color: rgba(0, 0, 0, 0.3); /* 반투명한 검은색 배경으로 텍스트를 강조 */
+    padding: 10px 20px; /* 명언을 감싸는 여백 */
+    border-radius: 10px; /* 부드러운 둥근 모서리 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 살짝 떠 있는 느낌을 주는 그림자 */
+    max-width: 600px; /* 명언의 최대 너비 설정 */
+    margin: 20px auto; /* 위아래 여백과 가운데 정렬 */
+}
+
+#quote span:last-child {
+    font-size: 16px; /* 작고 은은한 작가 이름 */
+    color: rgba(255, 255, 255, 0.7); /* 조금 더 연한 텍스트 색상 */
+    margin-top: 10px; /* 명언과 작가 이름 사이 간격 */
+    text-align: right; /* 작가 이름을 오른쪽 정렬 */
+}
+
+#quote span:first-child {
+    margin-right: 10px;
+}
+
+#weather {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+img {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
